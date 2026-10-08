@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elite Minerals Connect — Demo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">EM</div>
+    <div><h1>ELITE MINERALS CONNECT</h1><span>TRUSTED SUPPLY &nbsp;|&nbsp; VERIFIED BUYERS &nbsp;|&nbsp; SECURE TRANSACTIONS &nbsp;|&nbsp; GLOBAL NETWORK</span></div>
+  </div>
+  <div class="tagline">REAL MINERALS.<br>REAL PEOPLE.<br>REAL OPPORTUNITIES.</div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="welcome">Good day,<strong>Michelle Jones</strong><span class="status">● Demo account</span></div>
+    <div class="demo-note">DEMO / PROTOTYPE</div>
+    <nav>
+      <button class="nav active" data-view="members">👥 <span>Members</span></button>
+      <button class="nav" data-view="commodities">◈ <span>Minerals & Commodities</span></button>
+      <button class="nav" data-view="opportunities">📈 <span>Trade Opportunities</span><b>4</b></button>
+      <button class="nav" data-view="documentation">▤ <span>Documentation</span><b>3</b></button>
+      <button class="nav" data-view="logistics">⚓ <span>Logistics & Shipping</span></button>
+      <button class="nav" data-view="messages">✉ <span>Messages</span><b>2</b></button>
+      <button class="nav" data-view="profile">♙ <span>My Profile</span></button>
+      <button class="nav" data-view="settings">⚙ <span>Settings</span></button>
+      <button class="nav" data-view="support">◉ <span>Support</span></button>
+    </nav>
+    <div class="account-box">
+      <div class="lock">🔒</div>
+      <strong>CONTACT ACCESS</strong>
+      <p>Member contact details are protected in this demonstration.</p>
+      <button class="gold" id="joinBtn">JOIN / REGISTER</button>
+    </div>
+    <div class="footer-mini">ELITE MINERALS CONNECT<br><small>SECURE &nbsp;|&nbsp; PROFESSIONAL &nbsp;|&nbsp; GLOBAL</small></div>
+  </aside>
+
+  <main class="main">
+    <section id="members" class="view active-view">
+      <div class="heading-row">
+        <div><h2>Our Elite Members</h2><p>Verified professionals. Buyers, sellers and service providers.</p></div>
+        <button class="outline" id="addBtn">+ List Yourself</button>
+      </div>
+      <div class="filters">
+        <input id="search" placeholder="Search by name, mineral, location, or industry…">
+        <select id="commodity"><option value="">All Commodities</option></select>
+        <select id="role"><option value="">All Roles</option><option>Buyer</option><option>Seller</option><option>Broker</option><option>Service Provider</option></select>
+      </div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="commodities" class="view"><h2>Minerals & Commodities</h2><p>Browse the categories members can list as buying or selling interests.</p><div id="commodityGrid" class="commodity-grid"></div></section>
+    <section id="opportunities" class="view"><h2>Trade Opportunities</h2><div class="placeholder-grid"><article>Buyer Request<br><strong>Palladium — Southern Africa</strong><small>Demo listing</small></article><article>Supplier Offer<br><strong>Chrome — KZN</strong><small>Demo listing</small></article><article>Broker Network<br><strong>PGM & Precious Metals</strong><small>Demo listing</small></article></div></section>
+    <section id="documentation" class="view"><h2>Documentation</h2><p>Future area for listing supporting documents, verification status and transaction paperwork.</p></section>
+    <section id="logistics" class="view"><h2>Logistics & Shipping</h2><p>Future area for freight, clearing, transport and secure delivery service providers.</p></section>
+    <section id="messages" class="view"><h2>Messages</h2><p>Private member messaging will be connected to a real database in the next stage.</p></section>
+    <section id="profile" class="view"><h2>My Profile</h2><p><strong>Michelle Jones</strong> — Demo member profile.</p><button class="gold" id="profileEdit">Edit Profile</button></section>
+    <section id="settings" class="view"><h2>Settings</h2><p>Account and privacy settings for the prototype.</p></section>
+    <section id="support" class="view"><h2>Support</h2><p>Questions about listings, verification or membership can be handled here in the full version.</p></section>
+  </main>
+
+  <aside class="rightbar">
+    <div class="access">
+      <div class="diamond">◆</div><h3>MEMBER ACCESS</h3>
+      <p>Explore member profiles and trade opportunities. Contact details are protected until the site is connected to its real membership system.</p>
+      <ul><li>View profiles</li><li>Search buyers & sellers</li><li>List your business</li><li>Find trade opportunities</li><li>Private contact access later</li></ul>
+      <div class="fee">PLANNED MEMBERSHIP<br><strong>R259</strong><span>/month</span></div>
+      <button class="disabled">DEMO — NO PAYMENT</button>
+    </div>
+    <div class="trade"><h3>TRADE IN:</h3><ul><li>Palladium (Pd)</li><li>Rhodium (Rh)</li><li>Platinum (Pt)</li><li>Gold</li><li>Chrome</li><li>Manganese</li><li>Tantalum</li><li>Rare Earth Elements</li></ul></div>
+    <div class="notice">🛡️ <strong>DEMO NOTICE</strong><br>This prototype does not process payments or represent a real verification service.</div>
+  </aside>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="close" id="close">×</button>
+    <h2>List Yourself on Elite Minerals Connect</h2>
+    <p>Create a demonstration member listing. In the live version, submissions would be stored in a secure database and reviewed by an administrator.</p>
+    <form id="memberForm">
+      <label>Name / Company<input name="name" required placeholder="Your name or company"></label>
+      <label>Role<select name="role"><option>Buyer</option><option>Seller</option><option>Broker</option><option>Service Provider</option></select></label>
+      <label>Location<input name="location" required placeholder="City, Province / Country"></label>
+      <label>Minerals / Services<input name="interests" required placeholder="e.g. Chrome, Gold, Logistics"></label>
+      <label>Short description<textarea name="description" placeholder="What are you looking for or offering?"></textarea></label>
+      <button class="gold" type="submit">ADD DEMO LISTING</button>
+    </form>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
